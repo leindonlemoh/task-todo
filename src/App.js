@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Thoughts from "./components/Thoughts";
+import Todo from "./components/ToDo";
+import AppsBar from "./components/AppBar";
+import Route from "./components/Route";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <AppsBar />
+      <Route path="/">
+        <Thoughts />
+      </Route>
+      <Route path="/todo">
+        <Todo />
+      </Route>
+      {/* <Todo />
+      <Thoughts /> */}
     </div>
   );
 }
