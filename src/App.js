@@ -13,8 +13,6 @@ function App() {
       <Route path="/todo">
         <Todo />
       </Route>
-      {/* <Todo />
-      <Thoughts /> */}
     </div>
   );
 }
